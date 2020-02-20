@@ -24,9 +24,7 @@ At the bottom of any page you want to make "stampable", create an object with in
 <script src="jquery.snowshoe.js"></script>
 ```
 
-Optionally, post via AJAX and handle success/failure in the client.
-
-**_NOTE:_** Whenever stamp data is submitted by Ajax, it waits for request completion before generating another Ajax request.
+**_NOTE:_** Whenever stamp data is submitted, it waits for request completion before generating another Ajax request.
 
 ```javascript
 <script>
@@ -132,7 +130,7 @@ var stampScreenInitData = {
 <script src="jquery.snowshoe.js"></script>
 ```
 
-4\. If you are using ajax to send stamp data to your backend, you can likewise append a helpful error messaging html block in the error callback to let your users know that a stamp wasn't recognized.
+4\. You can likewise append a helpful error messaging html block in the error callback to let your users know that a stamp wasn't recognized.
 
 ```javascript
 <script>
@@ -144,7 +142,6 @@ var stampScreenInitData = {
     "userTraining" : "<h3>Keep holding</h3>",
     "insufficientPoints" : "<h3>Try again!</h3>"
   },
-  "postViaAjax": true,
   "success": function(response){
     // handle success
     console.log("Success!");
@@ -167,6 +164,21 @@ var stampScreenInitData = {
 ```
 
 Again, feel free to override any of snowshoe-sample.css with your own, just be sure to keep the element id `#snowshoe-messages` on the div you want to append your help message html blocks to.
+
+### API Key
+If you wish to directly post to the Snowshoe API you will need to add your applications API key to the initalization configutation. Not including this key when making direct posts to our API will result in an authorization error.
+
+```javascript
+<script>
+  var stampScreenInitData = {
+    "postUrl": "http://api.snowshoe.com/v3/stamp",
+    "stampScreenElmId": "stamp-screen"
+    "apiKey": "YOUR_SNOWSHOE_API_KEY"
+  }
+</script>
+<script src="jquery.snowshoe.js"></script>
+```
+
 
 ## Contribute
 Join us in improving this client by making a pull request.
