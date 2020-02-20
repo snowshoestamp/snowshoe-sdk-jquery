@@ -96,7 +96,7 @@ The Snowshoe jQuery module dynamically adds the load animation class whenever 5 
 Feel free to override any of the CSS with your own. Also, if you’d like to implement your own loader, simply remove the `progressBarOn` key from your initialization data object or set it to `false`. 
 
 ### Help Messages
-If a user is having trouble with their stamp, displaying help messages to them can be useful. With our new Stamp 2.0 hardware, it helps to stamp and hold for a couple seconds on some devices. We've added dynamic messaging to this module allowing you to display custom messaging onscreen that will guide users toward best stamping practices.
+If a user is having trouble with their stamp, displaying help messages to them can be useful. On some devices it helps to stamp and hold for a couple of seconds. We've added dynamic messaging to this module allowing you to display custom messaging onscreen that will guide users toward best stamping practices.
 
 1\. Include `snowshoe-sample.css`.  This includes default styling to display the messages. Feel free (and you should) customize this css as needed.
 
@@ -171,7 +171,7 @@ If you wish to directly post to the Snowshoe API you will need to add your appli
 ```javascript
 <script>
   var stampScreenInitData = {
-    "postUrl": "http://api.snowshoe.com/v3/stamp",
+    "postUrl": "https://api.snowshoestamp.com/v3/stamp",
     "stampScreenElmId": "stamp-screen"
     "apiKey": "YOUR_SNOWSHOE_API_KEY"
   }
