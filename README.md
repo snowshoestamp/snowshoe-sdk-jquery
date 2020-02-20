@@ -172,7 +172,7 @@ If you wish to directly post to the Snowshoe API you will need to add your appli
 <script>
   var stampScreenInitData = {
     "postUrl": "https://api.snowshoestamp.com/v3/stamp",
-    "stampScreenElmId": "stamp-screen"
+    "stampScreenElmId": "stamp-screen",
     "apiKey": "YOUR_SNOWSHOE_API_KEY"
   }
 </script>
