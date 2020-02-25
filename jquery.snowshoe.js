@@ -1,7 +1,7 @@
 /*
 Snowshoe jQuery (https://github.com/snowshoestamp/snowshoe-sdk-jquery)
 jquery.snowshoe.js
-Version 3.0.0
+Version 3.0.1
 See GitHub project page for Documentation and License
 */
 (function ($) {
@@ -94,6 +94,9 @@ See GitHub project page for Documentation and License
         $.ajax({
           'url': endpoint,
           'method' : "POST",
+          'headers': {
+            "Content-Type" : "application/json"
+          }, 
           'data': JSON.stringify({"data": data}),
           success: function (response) {
             cbkComplete(response);
