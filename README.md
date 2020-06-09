@@ -3,7 +3,7 @@ Snowshoe jQuery
 Front-end client to submit Snowshoe stamp point data to your backend.
 
 ## Current Version
-- 3.0.1
+- 3.0.2
 
 ## Dependencies
 - jQuery (>= 1.8.x)
