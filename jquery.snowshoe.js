@@ -54,7 +54,7 @@ See GitHub project page for Documentation and License
             var touches = event.touches;
             for (var i = 0; i <= event.touches.length; i++) {
               if (touches[i]) {
-                data.push([touches[i].pageX.toFixed(2), touches[i].pageY.toFixed(2)]);
+                data.push([+touches[i].pageX.toFixed(2), +touches[i].pageY.toFixed(2)]);
               }
             }
             send(data, apiKey);
