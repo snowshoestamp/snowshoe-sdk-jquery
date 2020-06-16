@@ -1,7 +1,7 @@
 /*
 Snowshoe jQuery (https://github.com/snowshoestamp/snowshoe-sdk-jquery)
 jquery.snowshoe.js
-Version 3.0.2
+Version 3.0.3
 See GitHub project page for Documentation and License
 */
 (function ($) {
