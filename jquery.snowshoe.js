@@ -1,7 +1,7 @@
 /*
 Snowshoe jQuery (https://github.com/snowshoestamp/snowshoe-sdk-jquery)
 jquery.snowshoe.js
-Version 3.0.3
+Version 3.0.4
 See GitHub project page for Documentation and License
 */
 (function ($) {
@@ -21,6 +21,7 @@ See GitHub project page for Documentation and License
         var points = [];
         var stampScreenElm = document.getElementById(stampScreenElmId);
         var stampTouching = false;
+        var pointsMax = configs.expectedPoints || 5;
         var pointsMin = configs.insufficientPointsMin || 3;
         var holdMsg;
         var apiKey = configs.apiKey;
@@ -49,7 +50,7 @@ See GitHub project page for Documentation and License
             $('#snowshoe-progress-bar').addClass("snowshoe-progress-bar");
           };
 
-          if (event.touches.length >= 5) {
+          if (event.touches.length >= pointsMax) {
             var data = [];
             var touches = event.touches;
             for (var i = 0; i <= event.touches.length; i++) {
@@ -60,7 +61,7 @@ See GitHub project page for Documentation and License
             send(data, apiKey);
           }
 
-          if (event.touches.length < 5 && event.touches.length >= pointsMin) {
+          if (event.touches.length < pointsMax && event.touches.length >= pointsMin) {
             $('#snowshoe-progress-bar').removeClass("snowshoe-progress-bar");
             // Teach users to stamp and hold for 2 seconds before displaying user-defined message
             if (helpMessage) {
